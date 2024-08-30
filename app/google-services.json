@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "882652486417",
+    "project_id": "fir-lite-8e2de",
+    "storage_bucket": "fir-lite-8e2de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882652486417:android:5484e94f3ed5c7c37a4ab0",
+        "android_client_info": {
+          "package_name": "dev.pablorjd.firebasecourse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmGXwTAQ9Or36dyMKVphqMRTrOPph8-VQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
