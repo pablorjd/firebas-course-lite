@@ -70,7 +70,7 @@ fun InitialScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit
         )
         Spacer(modifier = Modifier.weight(1f))
         Button(
-            onClick = { /*TODO*/ }, modifier = Modifier
+            onClick = { navigateToSignUp() }, modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal =  32.dp),
             colors = ButtonDefaults.buttonColors(containerColor = Green)
@@ -84,7 +84,7 @@ fun InitialScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit
         CustomButton(
             Modifier.clickable { },
             painterResource(id = R.drawable.facebook),
-            "Continue with Facebook"
+            "Continue with Facebook min 29"
         )
         Text(
             text = "Log In",

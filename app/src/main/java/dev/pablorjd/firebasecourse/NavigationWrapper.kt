@@ -12,7 +12,10 @@ import dev.pablorjd.firebasecourse.presentation.singup.SingupScreen
 fun NavigationWrapper(navHostController: NavHostController) {
     NavHost(navController = navHostController, startDestination = "initial") {
         composable("initial") {
-            InitialScreen()
+            InitialScreen(
+                navigateToLogin = { navHostController.navigate("login") },
+                navigateToSignUp = { navHostController.navigate("singup") }
+            )
         }
         composable("login") {
             LoginScreen()
