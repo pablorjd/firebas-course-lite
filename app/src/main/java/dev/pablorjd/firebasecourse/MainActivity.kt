@@ -19,6 +19,7 @@ class MainActivity : ComponentActivity() {
 
     private lateinit var navHostController: NavHostController
     private lateinit var auth:FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         auth = Firebase.auth
         super.onCreate(savedInstanceState)
@@ -26,8 +27,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             navHostController = rememberNavController()
             FirebaseCourseTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    NavigationWrapper(navHostController, auth)
+                Scaffold(modifier = Modifier.fillMaxSize()) {
+                    NavigationWrapper(navHostController, auth, it)
                 }
             }
         }
@@ -39,6 +40,16 @@ class MainActivity : ComponentActivity() {
 
         if(currenUser != null) {
             Log.i("Auth", "Session Iniciada")
+            //navHostController.navigate("home")
+            auth.signOut()
+        } else {
+            Log.i("Auth", "Session Cerrada")
+            //navHostController.navigate("login")
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        auth.signOut()
     }
 }

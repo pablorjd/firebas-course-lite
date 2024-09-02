@@ -1,6 +1,5 @@
 package dev.pablorjd.firebasecourse.presentation.login
 
-import android.inputmethodservice.Keyboard
 import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -94,6 +93,9 @@ fun LoginScreen(auth: FirebaseAuth, navigateToHome: () -> Unit ) {
 
                 }
 
+            }.addOnFailureListener {
+                Log.i("Auth", "Login Incorrecto")
+                Log.i("Auth", it.message.toString())
             }
         }) {
             Text(text = "Login")

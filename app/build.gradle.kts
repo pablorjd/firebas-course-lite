@@ -57,9 +57,13 @@ dependencies {
     implementation(platform(libs.firebase.bom)) // Los Boms deben de cargarse con el metodos platform
     implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
 
     // navigation
     implementation(libs.androidx.navigation.compose)
+
+    // coil Images
+    implementation(libs.coil)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
